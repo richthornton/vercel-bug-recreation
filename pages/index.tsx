@@ -9,7 +9,7 @@ const Home: NextPage = () => {
         <h1>Home page</h1>
         <div>
           {routes.map(route => 
-            <Link href={`/details/${route}`}>
+            <Link key={route} href={`/details/${route}`}>
               <a>{route} - click me</a>
             </Link>
           )}
