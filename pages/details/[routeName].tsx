@@ -3,6 +3,8 @@ import { routes } from '../../routes'
 
 export async function getStaticPaths() {
     return {
+      // uncomment line below to fix the issue
+      // paths: routes.map(routeName => ({ params: { routeName: encodeURIComponent(routeName) } })),
       paths: routes.map(routeName => ({ params: { routeName } })),
       fallback: 'blocking'
     };
